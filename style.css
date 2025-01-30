@@ -3,6 +3,11 @@
   src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
 }
 
+@font-face {
+  font-family: Young-Serif;
+  src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
 :root {
   /* colors */
   --white: hsl(0, 0%, 100%);
@@ -42,9 +47,17 @@ ul {
   font-weight: normal;
 }
 
-ol,
+ol {
+  /* list-style: none; */
+  padding-left: 1rem;
+}
+
 ul {
-  list-style: none;
+  padding-left: 0.3rem;
+}
+
+li {
+  padding-block: 0.5em;
 }
 
 img {
@@ -54,7 +67,138 @@ img {
 
 /* General style */
 
+hr {
+  border: 1px solid var(--stone-150);
+  margin: 2em;
+}
+
 body {
   font-family: Outfit, sans-serif;
   background-color: var(--stone-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--stone-600);
+}
+
+.recipe-page {
+  background-color: var(--white);
+}
+
+h1,
+h2 {
+  font-family: Young-serif, sans-serif;
+  color: var(--stone-900);
+}
+
+h2 {
+  color: var(--brown-800);
+  font-size: 2em;
+}
+
+.recipe-intro > hr {
+  margin: 0 1.5em;
+  border: 1px solid var(--stone-150);
+}
+
+.recipe-ingredients,
+.recipe-instructions,
+.recipe-nutrition,
+.recipe-intro-details-container {
+  padding-inline: 2em;
+}
+
+.recipe-intro-title,
+.recipe-intro-details,
+.recipe-intro-prep-time-container {
+  margin: 0.7em 0;
+}
+
+.recipe-intro-title {
+  margin-top: 1em;
+  font-size: 2.5em;
+  line-height: 1;
+}
+
+.recipe-intro-prep-time-container {
+  margin: 2.8em 0;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: var(--rose-50);
+}
+
+.recipe-intro-prep-time-container > p {
+  color: var(--rose-800);
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.recipe-intro-prep-time-container > ul > li {
+  padding-block: 0.2em;
+}
+
+ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.8em;
+}
+
+ul > li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 900;
+}
+
+.recipe-intro-prep-time-container > ul > li::before {
+  color: var(--rose-800);
+}
+
+.recipe-ingredients > ul > li::before {
+  color: var(--brown-800);
+}
+
+ul,
+ol {
+  padding-top: 1em;
+}
+
+ol > li {
+  padding-left: 1.2em;
+}
+
+ol > li::marker {
+  color: var(--brown-800);
+  font-weight: 600;
+}
+
+.recipe-nutrition > p:nth-child(2) {
+  margin-block: 1em;
+}
+
+.recipe-nutrition-tbl > tr > td {
+  border: 5px solid var(--brown-800);
+}
+
+table {
+  margin-bottom: 2em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  font-size: 14px;
+  border-bottom: 2px solid var(--stone-150);
+  padding: 1em;
+}
+
+td:nth-child(2) {
+  color: var(--brown-800);
+  font-weight: 600;
 }
