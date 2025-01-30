@@ -202,3 +202,29 @@ td:nth-child(2) {
   color: var(--brown-800);
   font-weight: 600;
 }
+
+table tr:last-child td {
+  border-bottom: none; /* Remove bottom border from last row's cells */
+}
+
+@media only screen and (min-width: 767px) {
+  body {
+    padding: 8em;
+  }
+  main {
+    max-width: 50em;
+    padding: 2.5em;
+    border-radius: 20px;
+  }
+
+  .recipe-ingredients,
+  .recipe-instructions,
+  .recipe-nutrition,
+  .recipe-intro-details-container {
+    padding-inline: 0;
+  }
+
+  .recipe-intro-img-container > img {
+    border-radius: 10px;
+  }
+}
